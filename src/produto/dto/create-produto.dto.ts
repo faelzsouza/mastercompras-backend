@@ -7,25 +7,13 @@ export class CreateProdutoDto {
   produtos: Produto[];
 }
 
-class Produto {
+export class Produto {
   @IsString()
-  nome: string;
+  nome: string; //
+  @IsNumber()
+  valor: number; //
   @IsString()
-  secao: string;
-  @IsNumber()
-  preco: number;
-  @IsNumber()
-  valor_min: number;
-  @IsNumber()
-  valor_med: number;
-  @IsNumber()
-  valor_max: number;
+  data: string;
   @IsString()
-  data_compra: string;
-  @IsNumber()
-  loja_id: number;
-  @IsNumber()
-  qtd_soma: number;
-  @IsNumber()
-  valor_soma: number;
+  loja: string;
 }
