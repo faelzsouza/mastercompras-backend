@@ -19,8 +19,8 @@ model Loja {
 
 model Produto {
   id Int @id @default(autoincrement())
-  nome String
-  secao String
+  nome String @unique
+  secao String?
   preco Float
   valor_min Float
   valor_med Float
