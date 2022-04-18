@@ -62,7 +62,7 @@ export class ProdutoService {
         this.update(produto_db.id, produto);
       }
     }, this));
-    return await this.prisma.produto.createMany({data})
+    return await this.prisma.produto.createMany({data, skipDuplicates: true})
   }
 
   findAll() {
